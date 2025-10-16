@@ -30,6 +30,7 @@ html, body {
 }
 
 /* Position absolute gør måske positionering af sætstykker lettere */
+
 #scene {
   position: absolute;
   top: 0;
@@ -42,6 +43,252 @@ html, body {
   background-repeat: no-repeat;
   font-size: large;
 }
+
+/* Herunder kommer vores fiske animationer */
+
+
+#Dvaergkejser {
+    position: absolute;
+    right: -300px;
+    top: 150px;
+    animation: svoem 4s forwards ease-in-out;
+}
+@keyframes svoem {
+ 0% {
+        transform: translateX(0px);
+    }
+  100% {
+        transform: translateX(-1000px);
+  }
+}
+
+
+#doryfisk {
+    position: absolute;
+    right: -300px;
+    top: 150px;
+    animation: svoem 4s forwards ease-in-out;
+}
+@keyframes svoem {
+ 0% {
+        transform: translateX(0px);
+    }
+  100% {
+        transform: translateX(-1000px);
+  }
+}
+
+
+#snegl {
+    position: absolute;
+    right: -300px;
+    top: 150px;
+    animation: svoem 4s forwards ease-in-out;
+}
+@keyframes svoem {
+ 0% {
+        transform: translateX(0px);
+    }
+  100% {
+        transform: translateX(-1000px);
+  }
+}
+
+
+#lilleklovnfisk {
+    position: absolute;
+    right: -300px;
+    top: 150px;
+    animation: svoem 4s forwards ease-in-out;
+}
+@keyframes svoem {
+ 0% {
+        transform: translateX(0px);
+    }
+  100% {
+        transform: translateX(-1000px);
+  }
+}
+
+
+#lillegraafisk {
+    position: absolute;
+    right: -300px;
+    top: 150px;
+    animation: svoem 4s forwards ease-in-out;
+}
+@keyframes svoem {
+ 0% {
+        transform: translateX(0px);
+    }
+  100% {
+        transform: translateX(-1000px);
+  }
+}
+
+
+#lilleblaafisk {
+    position: absolute;
+    right: -300px;
+    top: 150px;
+    animation: svoem 4s forwards ease-in-out;
+}
+@keyframes svoem {
+ 0% {
+        transform: translateX(0px);
+    }
+  100% {
+        transform: translateX(-1000px);
+  }
+}
+
+
+#lillelyseblaafisk {
+    position: absolute;
+    right: -300px;
+    top: 150px;
+    animation: svoem 4s forwards ease-in-out;
+}
+@keyframes svoem {
+ 0% {
+        transform: translateX(0px);
+    }
+  100% {
+        transform: translateX(-1000px);
+  }
+}
+
+
+#piratmandgaar {
+    position: absolute;
+    right: -300px;
+    top: 150px;
+    animation: svoem 4s forwards ease-in-out;
+}
+@keyframes svoem {
+ 0% {
+        transform: translateX(0px);
+    }
+  100% {
+        transform: translateX(-1000px);
+  }
+}
+
+
+#piratmandpeger {
+    position: absolute;
+    right: -300px;
+    top: 150px;
+    animation: svoem 4s forwards ease-in-out;
+}
+@keyframes svoem {
+ 0% {
+        transform: translateX(0px);
+    }
+  100% {
+        transform: translateX(-1000px);
+  }
+}
+
+
+#ror {
+    position: absolute;
+    right: -300px;
+    top: 150px;
+    animation: svoem 4s forwards ease-in-out;
+}
+@keyframes svoem {
+ 0% {
+        transform: translateX(0px);
+    }
+  100% {
+        transform: translateX(-1000px);
+  }
+}
+
+
+#flag {
+    position: absolute;
+    right: -300px;
+    top: 150px;
+    animation: svoem 4s forwards ease-in-out;
+}
+@keyframes svoem {
+ 0% {
+        transform: translateX(0px);
+    }
+  100% {
+        transform: translateX(-1000px);
+  }
+}
+
+
+#kiste {
+    position: absolute;
+    right: -300px;
+    top: 150px;
+    animation: svoem 4s forwards ease-in-out;
+}
+@keyframes svoem {
+ 0% {
+        transform: translateX(0px);
+    }
+  100% {
+        transform: translateX(-1000px);
+  }
+}
+
+
+#groenalge {
+    position: absolute;
+    right: -300px;
+    top: 150px;
+    animation: svoem 4s forwards ease-in-out;
+}
+@keyframes svoem {
+ 0% {
+        transform: translateX(0px);
+    }
+  100% {
+        transform: translateX(-1000px);
+  }
+}
+
+
+#orangetang {
+    position: absolute;
+    right: -300px;
+    top: 150px;
+    animation: svoem 4s forwards ease-in-out;
+}
+@keyframes svoem {
+ 0% {
+        transform: translateX(0px);
+    }
+  100% {
+        transform: translateX(-1000px);
+  }
+}
+
+
+#musling {
+    position: absolute;
+    right: -300px;
+    top: 150px;
+    animation: svoem 4s forwards ease-in-out;
+}
+@keyframes svoem {
+ 0% {
+        transform: translateX(0px);
+    }
+  100% {
+        transform: translateX(-1000px);
+  }
+}
+
+
+
+/* Herunder er guide til inforboks */
 
 /* Info omådet (her vises informationer om det man klikker på */
 #info {
@@ -60,6 +307,8 @@ p {
   max-width: 33ch;
   margin: auto;
 }
+
+/* Herunder er guide til animationer */
 
 /* Animationer */
 figure#Guldfisk {
