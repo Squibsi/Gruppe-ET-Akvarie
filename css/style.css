@@ -55,48 +55,62 @@ left: 0;}
 
 #Dvaergkejser {
    position: absolute;
-   right: -300px;
-   top: 150px;
-   width: 300px;
-   height: auto;
-   /*animation: svoem 4s forwards ease-in-out;*/
+   right: -1000px;
+   top: -300px;
+    width: 800px;
+    height: autopx;
+ animation-name: svoem;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
 }
-/*@keyframes svoem {
+@keyframes svoem {
 0% {
-       transform: translateX(0px);
+      top: 200px;
+      right: 0px;
    }
- 100% {
-       transform: translateX(-1000px);
+ 10% {
+       top: 150px;
+        right: 200px;
+ }  
+ 50% {
+        top: 300px;
+          right: 200px;
  }
-}*/
+ 100% {
+       top: 700px;
+        right: 2000px;
+ }
+}
 
 
 
 
 #doryfisk {
    position: absolute;
-   right: -300px;
-   top: 30cm;
-   width: 100px;
-   height: auto;
+   right: 5px;
+   top: 300px;
+   width: 700px;
+   height: 600px;
    /*animation: svoem 4s forwards ease-in-out;*/
 }
-/*@keyframes svoem {
+@keyframes svoem {
 0% {
        transform: translateX(0px);
    }
  100% {
-       transform: translateX(-10cm);
+       transform: translateX(-1000px);
  }
-}*/
+}
 
 
 
 
 #snegl {
    position: absolute;
-   right: -30;
-   top: 150px;
+   right: 800px;
+   top: 667px;
+   height: 150px;
+    width: 200px;
    /*animation: svoem 4s forwards ease-in-out;*/
 }
 @keyframes svoem {
@@ -113,16 +127,22 @@ left: 0;}
 
 #lilleklovnfisk {
    position: absolute;
-   right: -300px;
-   top: 150px;
-   /*animation: svoem 4s forwards ease-in-out;*/
+   right: 100px;
+   top: 50px;
+   height: 170px;
+    width: 230px;
+   animation: svoem 4s forwards ease-in-out;
 }
 @keyframes svoem {
 0% {
        transform: translateX(0px);
    }
+50% {
+        top: 200px;
+        right: 500px;
+}   
  100% {
-       transform: translateX(-10cm);
+       transform: translateX(-1000px);
  }
 }
 
@@ -131,8 +151,10 @@ left: 0;}
 
 #lillegraafisk {
    position: absolute;
-   right: -300px;
-   top: 150px;
+   right: 70px;
+   top: 50px;
+   width: 150px;
+   height: 100px;
    /*animation: svoem 4s forwards ease-in-out;*/
 }
 @keyframes svoem {
@@ -149,8 +171,10 @@ left: 0;}
 
 #lilleblaafisk {
    position: absolute;
-   right: -300px;
-   top: 150px;
+   right: 90px;
+   top: 80px;
+   width: 350px;
+   height: 250px;
    /*animation: svoem 4s forwards ease-in-out;*/
 }
 @keyframes svoem {
@@ -164,13 +188,17 @@ left: 0;}
 
 
 
-
+/*
 #lillelyseblaafisk {
    position: absolute;
-   right: -300px;
-   top: 150px;
-   /*animation: svoem 4s forwards ease-in-out;*/
-}
+   right: -800px;
+   top: 10px;
+   width: 500px;
+   height: 10px;
+   /*animation: svoem 4s forwards ease-in-out;
+}*/
+
+
 @keyframes svoem {
 0% {
        transform: translateX(0px);
@@ -185,8 +213,9 @@ left: 0;}
 
 #piratmandgaar {
    position: absolute;
-   right: -800px;
-   top: -100px;
+   right: -700px;
+    top: 110px;
+
 
 
  
@@ -226,6 +255,8 @@ left: 0;}
    position: absolute;
    right: -300px;
    top: 150px;
+   width: 100px;
+    height: auto;
    /*animation: svoem 4s forwards ease-in-out;*/
 }
 @keyframes svoem {
@@ -282,8 +313,8 @@ left: 0;}
 
 #groenalge {
    position: absolute;
-   right: -300px;
-   top: 150px;
+   right: -20px;
+   top: 20px;
    /*animation: svoem 4s forwards ease-in-out;*/
 }
 @keyframes svoem {
@@ -300,8 +331,8 @@ left: 0;}
 
 #orangetang {
    position: absolute;
-   right: -300px;
-   top: 150px;
+   right: -800px;
+   top: 20px;
    /*animation: svoem 4s forwards ease-in-out;*/
 }
 @keyframes svoem {
@@ -318,8 +349,11 @@ left: 0;}
 
 #musling {
    position: absolute;
-   right: -300px;
-   top: 150px;
+   right: 970px;
+   top: 560px;
+   height: 400px;
+    width: 800px;
+  
    /*animation: svoem 4s forwards ease-in-out;*/
 }
 @keyframes svoem {
@@ -381,6 +415,17 @@ figure#Guldfisk {
  }
 }
 /* Animationsklasse */
+
+
+
+/* Responsivt design */
+/* Storcenter Nord Skærm */
+@media (min-width: 4536px) {
+  #info {
+    height: 2835px;
+    font-size: 1.5rem;
+  }
+}
 
 
 

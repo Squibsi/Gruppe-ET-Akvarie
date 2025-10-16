@@ -5,7 +5,7 @@
 console.log('Ok, JavaScriptet kører ...')
 
 /* fiskeobjekt */
-const guldfisk = {
+/*const guldfisk = {
     navn: "Guldfisk",
     info: "Fisk, der stammer fra den mystiske sø ...",
     image: "gladFisk_mini.png",
@@ -13,6 +13,7 @@ const guldfisk = {
     yPos: 150,
     speed: 12
 }
+    */
 
 /* Placer fisken på scenen */
 scene.innerHTML += `
