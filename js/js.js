@@ -1,3 +1,4 @@
+//alle har været inde over det meste af koden
 console.log("JavaScript kører...");
 
 const fishList = [
@@ -21,6 +22,7 @@ fishList.forEach(id => {
   }
 });
 
+//Lavet af Julie og Anton
 function showInfo(fishName) {
   infoBox.innerHTML = `
     <h2>${fishName}</h2>
