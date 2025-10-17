@@ -68,6 +68,7 @@ html, body {
   width: 250px;
   cursor: pointer;
   animation: sneglMove 6s ease-in-out infinite alternate;
+  /*den er hurtig*/
 }
 @keyframes sneglMove {
   0% { transform: translateX(0); }
