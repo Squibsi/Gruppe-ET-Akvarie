@@ -55,10 +55,10 @@ left: 0;}
 
 #Dvaergkejser {
    position: absolute;
-   right: -1000px;
-   top: -300px;
-    width: 800px;
-    height: autopx;
+   right: -100px;
+   top: -600px;
+    width: 500px;
+    height: 300px;
  animation-name: svoem;
   animation-duration: 4s;
   animation-timing-function: ease-in-out;
@@ -68,14 +68,8 @@ left: 0;}
       top: 200px;
       right: 0px;
    }
- 10% {
-       top: 150px;
-        right: 200px;
- }  
- 50% {
-        top: 300px;
-          right: 200px;
- }
+
+
  100% {
        top: 700px;
         right: 2000px;
@@ -89,9 +83,9 @@ left: 0;}
    position: absolute;
    right: 5px;
    top: 300px;
-   width: 700px;
-   height: 600px;
-   /*animation: svoem 4s forwards ease-in-out;*/
+   width: 500px;
+   height: 400px;
+   animation: svoem 8s forwards ease-in-out;
 }
 @keyframes svoem {
 0% {
@@ -131,7 +125,7 @@ left: 0;}
    top: 50px;
    height: 170px;
     width: 230px;
-   animation: svoem 4s forwards ease-in-out;
+   animation: svoem 3s forwards ease-in-out;
 }
 @keyframes svoem {
 0% {
@@ -233,11 +227,11 @@ left: 0;}
 
 
 
-#piratmandpeger {
+/*#piratmandpeger {
    position: absolute;
-   right: 700px;
-   top: -250px;
-   /*animation: svoem 4s forwards ease-in-out;*/
+   right: -380px;
+   top: -400px;
+   /*animation: svoem 4s forwards ease-in-out;
 }
 @keyframes svoem {
 0% {
@@ -247,7 +241,7 @@ left: 0;}
        transform: translateX(-1000px);
  }
 }
-
+*/
 
 
 
