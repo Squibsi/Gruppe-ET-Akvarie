@@ -410,11 +410,20 @@ p {
 
 
 /* Animationer */
-figure#Guldfisk {
-   position: absolute;
-   right: -300px;
-   top: 150px;
-   animation: svoem 4s forwards ease-in-out;
+
+
+#infokasse {
+    position: absolute;
+    left: 40%;
+    top: 45%;
+    background-color: aliceblue;
+    border-radius: 10%;
+    padding: 30px;
+    border-color: black;
+}
+
+.gemMig {
+  display: none;
 }
 
 
