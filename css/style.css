@@ -155,7 +155,7 @@ left: 0;}
    top: 50px;
    width: 150px;
    height: 100px;
-   /*animation: svoem 4s forwards ease-in-out;*/
+   animation: svoem 4s forwards ease-in-out;
 }
 @keyframes svoem {
 0% {
@@ -171,11 +171,11 @@ left: 0;}
 
 #lilleblaafisk {
    position: absolute;
-   right: 90px;
+   right: 100px;
    top: 80px;
    width: 350px;
    height: 250px;
-   /*animation: svoem 4s forwards ease-in-out;*/
+   animation: svoem 4s forwards ease-in-out;
 }
 @keyframes svoem {
 0% {
@@ -188,15 +188,15 @@ left: 0;}
 
 
 
-/*
+
 #lillelyseblaafisk {
    position: absolute;
-   right: -800px;
-   top: 10px;
-   width: 500px;
-   height: 10px;
-   /*animation: svoem 4s forwards ease-in-out;
-}*/
+   right: 70px;
+   top: 120px;
+   width: 350px;
+   height: 250px;
+   animation: svoem 4s forwards ease-in-out;
+}
 
 
 @keyframes svoem {
@@ -235,8 +235,8 @@ left: 0;}
 
 #piratmandpeger {
    position: absolute;
-   right: -300px;
-   top: 150px;
+   right: 700px;
+   top: -250px;
    /*animation: svoem 4s forwards ease-in-out;*/
 }
 @keyframes svoem {
@@ -363,6 +363,16 @@ left: 0;}
  100% {
        transform: translateX(-1000px);
  }
+}
+
+#soestjerne {
+   position: absolute;
+   right: 1000px;
+   top: 700px;
+   height: 50px;
+    width: 50px;
+  
+   /*animation: svoem 4s forwards ease-in-out;*/
 }
 
 
