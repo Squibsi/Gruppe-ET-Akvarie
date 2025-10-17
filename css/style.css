@@ -34,7 +34,7 @@ html, body {
 #Dvaergkejser, #doryfisk, #lilleklovnfisk, 
 #lillegraafisk, #lilleblaafisk, #lillelyseblaafisk {
   position: absolute;
-  width: 200px;
+  width: 400px;
   height: auto;
   cursor: pointer;
   animation: swimRandom 20s infinite ease-in-out;
@@ -59,7 +59,7 @@ html, body {
 /* BUND ELEMENTER */
 #snegl, #pinkkoral, #orangetang, #musling, #groenalge, #kiste {
   position: absolute;
-  bottom: 0;
+  height: auto;
 }
 
 #snegl {
@@ -73,19 +73,27 @@ html, body {
   100% { transform: translateX(50px); }
 }
 
-#pinkkoral { left: -250px; width: 400px; bottom: -45px;}
+#pinkkoral { left: -600px; width: 900px; bottom: -100px;}
 #orangetang { left: 900px; width: 350px; bottom: -35px; }
 #musling { left: 600px; width: 300px; bottom: -69px;}
-#groenalge { left: 450px; width: 200px; bottom: -20px;}
+#groenalge { left: 200px; width: 900px; bottom: -100px;}
 #kiste { right: 250px; width: 130px; bottom: -5px;}
 
 /* PIRAT FIGURER */
-#piratmandgaar, #piratmandpeger {
+#piratmandgaar {
   position: absolute;
-  bottom: -110px;
-  right: -150px;
-  width: 600px;
-  height: auto;
+  bottom: -250px;
+  right: -450px;
+  width: auto;
+  height: 800px;
+}
+
+#piratmandpeger {
+  position: absolute;
+  bottom: -550px;
+   right: -250px;
+  width: auto;
+  height: 1900px;
 }
 
 #piratmandpeger { display: none; }
