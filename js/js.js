@@ -1,69 +1,42 @@
-/**
- * file: js/js.js
- * purpose: Behaviors
- **/
-console.log('Ok, JavaScriptet kører ...');
+console.log("JavaScript kører...");
 
-/* fiskeobjekt */
-/*const guldfisk = {
-    navn: "Guldfisk",
-    info: "Fisk, der stammer fra den mystiske sø ...",
-    image: "gladFisk_mini.png",
-    xPos: 400,
-    yPos: 150,
-    speed: 12
-}
-    */
+const fishList = [
+  "Dvaergkejser",
+  "doryfisk",
+  "lilleklovnfisk",
+  "lillegraafisk",
+  "lilleblaafisk",
+  "lillelyseblaafisk",
+  "snegl"
+];
 
-/* Placer fisken på scenen */
-/*scene.innerHTML += `
-    <figure 
-     id="${guldfisk.navn}" 
-     onclick="fiskInfo('${guldfisk.info}')"
-     >
-        <img 
-         src="images/${guldfisk.image}" 
-         alt="${guldfisk.info}" >
-    </figure>
-`
+const infoBox = document.getElementById("info");
+const pirateWalk = document.getElementById("piratmandgaar");
+const piratePoint = document.getElementById("piratmandpeger");
 
-/* Indsætter egenskaben "info" fra et objekt */
-/*function fiskInfo(tekst){
-    console.log("fiskInfo() svarer ...") // test
-    info.innerHTML = "<p>" + tekst + "</p>"
-
-    /*
-        Og her kunne intruktionerne så fortsætte med:
-            - afspil lyd, video
-            - start andre animationer ved at kalde deres funktioner
-            - etc.
-    */
-
-
-/* Funktion der viser infoboks når man klikker på doryfisk */
-function bang() {
-  const info = document.getElementById("info");
-  if (!info) {
-    console.error("Elementet #info findes ikke i DOM'en.");
-    return;
+fishList.forEach(id => {
+  const fish = document.getElementById(id);
+  if (fish) {
+    fish.addEventListener("click", () => showInfo(id));
   }
+});
 
-  info.innerHTML = `
-    <div id="infokasse" role="dialog" aria-label="Fisk info" onclick="badaboom()">
-      <h2>Paletkirurgfisk (Dory)</h2>
-      <p>15–23 cm lang.<br>Levetid: 5–7 år.<br>Lever i tropiske koralrev.</p>
-      <button id="lukInfoknap" aria-label="Luk info">Luk</button>
-    </div>
+function showInfo(fishName) {
+  infoBox.innerHTML = `
+    <h2>${fishName}</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <button id="closeInfo">Luk</button>
   `;
-  // Sikr at knappen lukker boksen (bedre end kun onclick på div)
-  const knap = document.getElementById("lukInfoknap");
-  if (knap) knap.addEventListener('click', badaboom);
+  infoBox.classList.remove("hidden");
+  pirateWalk.style.display = "none";
+  piratePoint.style.display = "block";
 
-  // Valgfrit: sæt fokus til dialogen for tilgængelighed
-  const infokasse = document.getElementById("infokasse");
-  if (infokasse) infokasse.focus();
+  document.getElementById("closeInfo").addEventListener("click", hideInfo);
 }
 
-function badaboom() {
-  document.getElementById("infokasse").remove();
+function hideInfo() {
+  infoBox.classList.add("hidden");
+  pirateWalk.style.display = "block";
+  piratePoint.style.display = "none";
 }

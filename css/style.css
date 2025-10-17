@@ -1,15 +1,10 @@
-/**
- * Akvarium CSS udkast
- **/
-
-/* Fjerner whitespace */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
- /* Variabler: farvepaletten er lavet i JsFiddle */
- :root {
+
+:root {
   --color-1: rgb(109 181 202);
   --color-2: rgb(184 216 224);
   --color-3: rgb(252 245 239);
@@ -17,437 +12,100 @@
   --moerk: #000;
 }
 
-/* HD-skærmen er 1920x1080px og vi positionerer med absolute */
 html, body {
-  margin: 0;
-  padding: 0;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   position: relative;
-  touch-action: manipulation;
   font-family: sans-serif;
 }
 
-/* Position absolute gør måske positionering af sætstykker lettere */
-
-img {
-    width: 100%;
-    height: auto; /* Fyld pladsen ud med billedet */ 
-}
-
 #scene {
-background-image: url("../images/baggrund.png");
-background-size: cover;
-background-position: center;
-width: 100vw;
-height: 100vh;
-position: absolute;
-top: 0;
-left: 0;}
-
-
-
-/* Herunder kommer vores fiske animationer */
-
-
-
-
-#Dvaergkejser {
-   position: absolute;
-   right: -100px;
-   top: -600px;
-    width: 500px;
-    height: 300px;
- animation-name: svoem;
-  animation-duration: 4s;
-  animation-timing-function: ease-in-out;
-}
-@keyframes svoem {
-0% {
-      top: 200px;
-      right: 0px;
-   }
-
-
- 100% {
-       top: 700px;
-        right: 2000px;
- }
+  background-image: url("../images/baggrund.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
 }
 
-
-
-
-#doryfisk {
-   position: absolute;
-   right: 5px;
-   top: 300px;
-   width: 500px;
-   height: 400px;
-   animation: svoem 8s forwards ease-in-out;
-}
-@keyframes svoem {
-0% {
-       transform: translateX(0px);
-   }
- 100% {
-       transform: translateX(-1000px);
- }
+/* FISK */
+#Dvaergkejser, #doryfisk, #lilleklovnfisk, 
+#lillegraafisk, #lilleblaafisk, #lillelyseblaafisk {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+  animation: swimRandom 20s infinite ease-in-out;
 }
 
+/* Startpositioner */
+#Dvaergkejser { top: 200px; left: 200px; }
+#doryfisk { top: 400px; left: 800px; }
+#lilleklovnfisk { top: 100px; right: 200px; }
+#lillegraafisk { top: 250px; left: 1000px; }
+#lilleblaafisk { top: 150px; left: 600px; }
+#lillelyseblaafisk { top: 350px; right: 300px; }
 
+@keyframes swimRandom {
+  0% { transform: translate(0, 0) rotateY(0deg); }
+  25% { transform: translate(100px, -50px) rotateY(0deg); }
+  50% { transform: translate(-150px, 70px) rotateY(180deg); }
+  75% { transform: translate(80px, -30px) rotateY(0deg); }
+  100% { transform: translate(0, 0) rotateY(180deg); }
+}
 
+/* BUND ELEMENTER */
+#snegl, #pinkkoral, #orangetang, #musling, #groenalge, #kiste {
+  position: absolute;
+  bottom: 0;
+}
 
 #snegl {
-   position: absolute;
-   right: 750px;
-   top: 730px;
-   height: 300px;
-    width: 250px;
-   /*animation: svoem 4s forwards ease-in-out;*/
+  left: 200px;
+  width: 150px;
+  cursor: pointer;
+  animation: sneglMove 6s ease-in-out infinite alternate;
 }
-@keyframes svoem {
-0% {
-       transform: translateX(-1000px);
-   }
- 100% {
-       transform: translateX(0px);
- }
+@keyframes sneglMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50px); }
 }
 
+#pinkkoral { left: -250px; width: 400px; bottom: -45px;}
+#orangetang { left: 900px; width: 350px; bottom: -35px; }
+#musling { left: 600px; width: 300px; bottom: -69px;}
+#groenalge { left: 450px; width: 200px; bottom: -20px;}
+#kiste { right: 250px; width: 130px; bottom: -5px;}
 
-
-
-#lilleklovnfisk {
-   position: absolute;
-   right: 100px;
-   top: 50px;
-   height: 170px;
-    width: 230px;
-   animation: svoem 3s forwards ease-in-out;
-}
-@keyframes svoem {
-0% {
-       transform: translateX(0px);
-   }
-50% {
-        
-}   
- 100% {
-         transform: translateX(1000px);
- }
+/* PIRAT FIGURER */
+#piratmandgaar, #piratmandpeger {
+  position: absolute;
+  bottom: -110px;
+  right: -150px;
+  width: 600px;
+  height: auto;
 }
 
+#piratmandpeger { display: none; }
 
-
-
-#lillegraafisk {
-   position: absolute;
-   right: 70px;
-   top: 50px;
-   width: 150px;
-   height: 100px;
-   animation: svoem 4s forwards ease-in-out;
-}
-@keyframes svoem {
-0% {
-       transform: translateX(0px);
-   }
- 100% {
-       transform: translateX(-1000px);
- }
-}
-
-
-
-
-#lilleblaafisk {
-   position: absolute;
-   right: 100px;
-   top: 80px;
-   width: 350px;
-   height: 250px;
-   animation: svoem 4s forwards ease-in-out;
-}
-@keyframes svoem {
-0% {
-       transform: translateX(0px);
-   }
- 100% {
-       transform: translateX(-1000px);
- }
-}
-
-
-
-
-#lillelyseblaafisk {
-   position: absolute;
-   right: 70px;
-   top: 120px;
-   width: 350px;
-   height: 250px;
-   animation: svoem 4s forwards ease-in-out;
-}
-
-
-@keyframes svoem {
-0% {
-       transform: translateX(0px);
-   }
- 100% {
-       transform: translateX(-1000px);
- }
-}
-
-
-
-
-#piratmandgaar {
-   position: absolute;
-   right: -700px;
-    top: 110px;
-
-
-
- 
-   /*animation: svoem 4s forwards ease-in-out;*/
-}
-@keyframes svoem {
-0% {
-       transform: translateX(0px);
-   }
- 100% {
-       transform: translateX(-1000px);
- }
-}
-
-
-
-
-/*#piratmandpeger {
-   position: absolute;
-   right: -380px;
-   top: -400px;
-   /*animation: svoem 4s forwards ease-in-out;
-}
-@keyframes svoem {
-0% {
-       transform: translateX(0px);
-   }
- 100% {
-       transform: translateX(-1000px);
- }
-}
-*/
-
-
-
-#ror {
-   position: absolute;
-   right: -300px;
-   top: 150px;
-   width: 100px;
-    height: auto;
-   /*animation: svoem 4s forwards ease-in-out;*/
-}
-@keyframes svoem {
-0% {
-       transform: translateX(0px);
-   }
- 100% {
-       transform: translateX(-1000px);
- }
-}
-
-
-
-
-#flag {
-   position: absolute;
-   right: 900px;
-   top: 750px;
-   width: 300px;
-    height: 300px;
-   /*animation: svoem 4s forwards ease-in-out;*/
-}
-@keyframes svoem {
-0% {
-       transform: translateX(0px);
-   }
- 100% {
-       transform: translateX(-1000px);
- }
-}
-
-
-
-
-#kiste {
-   position: absolute;
-   right: -300px;
-   top: 150px;
-   width: 100px;
-    height: auto;
-   /*animation: svoem 4s forwards ease-in-out;*/
-}
-@keyframes svoem {
-0% {
-       transform: translateX(0px);
-   }
- 100% {
-       transform: translateX(-1000px);
- }
-}
-
-
-
-
-#groenalge {
-   position: absolute;
-   right: -20px;
-   top: 20px;
-   /*animation: svoem 4s forwards ease-in-out;*/
-}
-@keyframes svoem {
-0% {
-       transform: translateX(0px);
-   }
- 100% {
-       transform: translateX(-1000px);
- }
-}
-
-
-
-
-#orangetang {
-   position: absolute;
-   right: -1000px;
-   top: -100px;
-   /*animation: svoem 4s forwards ease-in-out;*/
-}
-@keyframes svoem {
-0% {
-       transform: translateX(0px);
-   }
- 100% {
-       transform: translateX(-1000px);
- }
-}
-
-
-
-
-#musling {
-   position: absolute;
-   right: 1420px;
-   top: 735px;
-   height: 400px;
-    width: 800px;
-  
-   /*animation: svoem 4s forwards ease-in-out;*/
-}
-@keyframes svoem {
-0% {
-       transform: translateX(0px);
-   }
- 100% {
-       transform: translateX(-1000px);
- }
-}
-
-#soestjerne {
-   position: absolute;
-   right: 1000px;
-   top: 700px;
-   height: 50px;
-    width: 50px;
-  
-   /*animation: svoem 4s forwards ease-in-out;*/
-}
-
-#pinkkoral {
-   position: absolute;
-   right: 1200px;
-   top: 300px;
-   height: 900px;
-    width: 700px;
-  
-   /*animation: svoem 4s forwards ease-in-out;*/
-}
-
-
-
-
-
-
-/* Herunder er guide til inforboks */
-
-
-/* Info omådet (her vises informationer om det man klikker på */
+/* INFOBOX */
 #info {
- position: absolute;
- bottom: 0;
- left: 0;
- width: 100%;
- height: 10vh;
- background-color: var(--moerk);
- color: var(--color-4);
- text-align: center;
- padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F5E1A4;
+  color: #1e3a5f;
+  border-radius: 10px;
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  z-index: 10;
 }
 
-
-p {
- max-width: 33ch;
- margin: auto;
-}
-
-
-/* Herunder er guide til animationer */
-
-
-/* Animationer */
-
-
-#infokasse {
-    position: absolute;
-    left: 40%;
-    top: 45%;
-    background-color: aliceblue;
-    border-radius: 10%;
-    padding: 30px;
-    border-color: black;
-}
-
-.gemMig {
+.hidden {
   display: none;
 }
-
-
-/* Fiskeanimationens keyframes */
-@keyframes svoem {
-0% {
-       transform: translateX(0px);
-   }
- 100% {
-       transform: translateX(-1000px);
- }
-}
-/* Animationsklasse */
-
-
-
-/* Responsivt design */
-/* Storcenter Nord Skærm */
-@media (min-width: 4536px) {
-  #info {
-    height: 2835px;
-    font-size: 1.5rem;
-  }
-}
-
-
-
